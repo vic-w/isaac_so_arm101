@@ -125,8 +125,8 @@ class SoArm100CameraLiftCubeEnvCfg(SoArm100LiftCubeEnvCfg):
             width=640,
             data_types=("rgb",),
             offset=CameraCfg.OffsetCfg(
-                pos=[0.0, 0.0, 0.08],
-                rot=[0.7071068, 0.0, 0.7071068, 0.0],
+                pos=[0.0, -0.1, 0.0],
+                rot=[0.0, 0.0, 1.0, -0.3],
             ),
             spawn=sim_utils.PinholeCameraCfg(
                 focal_length=18.0, focus_distance=4.0, horizontal_aperture=32.0, clipping_range=(0.1, 1.0e5)
