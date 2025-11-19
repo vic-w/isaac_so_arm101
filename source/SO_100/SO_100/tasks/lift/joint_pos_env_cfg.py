@@ -25,6 +25,9 @@ from SO_100.tasks.lift.lift_env_cfg import LiftEnvCfg
 
 from isaaclab.markers.config import FRAME_MARKER_CFG  # isort: skip
 
+from isaaclab.sensors.camera import CameraCfg
+from isaaclab.managers import SceneEntityCfg
+
 # ----------------------------------------------------------------
 # --------------- LycheeAI live asset ----------------------------
 # ----------------------------------------------------------------
@@ -103,3 +106,26 @@ class SoArm100LiftCubeEnvCfg_PLAY(SoArm100LiftCubeEnvCfg):
         self.scene.env_spacing = 2.5
         # disable randomization for play
         self.observations.policy.enable_corruption = False
+
+
+@configclass
+class SoArm100CameraLiftCubeEnvCfg(SoArm100LiftCubeEnvCfg):
+    """Camera-ready variant of the default cube lifting environment."""
+
+    def __post_init__(self):
+        """Currently identical to the base variant but defined separately for camera tasks."""
+
+        super().__post_init__()
+
+        self.scene.camera = CameraCfg(
+            prim_path="{ENV_REGEX_NS}/Robot/Camera",
+            update_period=0.0,
+            height=360,
+            width=640,
+            data_types=("rgb",),
+            parent_entity_cfg=SceneEntityCfg("robot", body_names=["Fixed_Gripper"]),
+            offset=CameraCfg.OffsetCfg(
+                pos=[0.0, 0.0, 0.08],
+                rot=[0.7071068, 0.0, 0.7071068, 0.0],
+            ),
+        )
