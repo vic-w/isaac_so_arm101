@@ -26,7 +26,8 @@ from SO_100.tasks.lift.lift_env_cfg import LiftEnvCfg
 from isaaclab.markers.config import FRAME_MARKER_CFG  # isort: skip
 
 from isaaclab.sensors.camera import CameraCfg
-from isaaclab.managers import SceneEntityCfg
+#from isaaclab.managers import SceneEntityCfg
+import isaaclab.sim as sim_utils
 
 # ----------------------------------------------------------------
 # --------------- LycheeAI live asset ----------------------------
@@ -118,14 +119,16 @@ class SoArm100CameraLiftCubeEnvCfg(SoArm100LiftCubeEnvCfg):
         super().__post_init__()
 
         self.scene.camera = CameraCfg(
-            prim_path="{ENV_REGEX_NS}/Robot/Camera",
+            prim_path="{ENV_REGEX_NS}/Robot/Fixed_Gripper/Camera",
             update_period=0.0,
-            height=360,
+            height=480,
             width=640,
             data_types=("rgb",),
-            parent_entity_cfg=SceneEntityCfg("robot", body_names=["Fixed_Gripper"]),
             offset=CameraCfg.OffsetCfg(
                 pos=[0.0, 0.0, 0.08],
                 rot=[0.7071068, 0.0, 0.7071068, 0.0],
+            ),
+            spawn=sim_utils.PinholeCameraCfg(
+                focal_length=18.0, focus_distance=4.0, horizontal_aperture=32.0, clipping_range=(0.1, 1.0e5)
             ),
         )
