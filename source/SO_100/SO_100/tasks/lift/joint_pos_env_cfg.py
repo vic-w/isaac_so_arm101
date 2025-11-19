@@ -28,7 +28,10 @@ from isaaclab.markers.config import FRAME_MARKER_CFG  # isort: skip
 from isaaclab.sensors.camera import CameraCfg
 #from isaaclab.managers import SceneEntityCfg
 import isaaclab.sim as sim_utils
-
+from isaaclab.managers import ObservationGroupCfg as ObsGroup
+from isaaclab.managers import ObservationTermCfg as ObsTerm
+from isaaclab.envs.mdp import observations as mdp_obs
+from isaaclab.managers import SceneEntityCfg
 # ----------------------------------------------------------------
 # --------------- LycheeAI live asset ----------------------------
 # ----------------------------------------------------------------
@@ -112,6 +115,37 @@ class SoArm100LiftCubeEnvCfg_PLAY(SoArm100LiftCubeEnvCfg):
 @configclass
 class SoArm100CameraLiftCubeEnvCfg(SoArm100LiftCubeEnvCfg):
     """Camera-ready variant of the default cube lifting environment."""
+    
+    @configclass
+    class ObservationsCfg:
+        """Override observations to add image features."""
+
+        @configclass
+        class PolicyCfg(ObsGroup):
+
+            joint_pos = ObsTerm(func=mdp.joint_pos_rel)
+            joint_vel = ObsTerm(func=mdp.joint_vel_rel)
+            #object_position = ObsTerm(func=mdp.object_position_in_robot_root_frame)
+            target_object_position = ObsTerm(func=mdp.generated_commands, params={"command_name": "object_pose"})
+            actions = ObsTerm(func=mdp.last_action)
+
+            # 🔥 只保留你需要的 observation term
+            camera_image_features = ObsTerm(
+                func=mdp_obs.image_features,
+                params={
+                    "sensor_cfg": SceneEntityCfg("camera"),
+                    "data_type": "rgb",
+                    "model_name": "resnet18",
+                },
+            )
+
+            # 决定是否 concat（一般保持 true）
+            def __post_init__(self):
+                self.enable_corruption = False
+                self.concatenate_terms = True
+
+        policy: PolicyCfg = PolicyCfg()
+
 
     def __post_init__(self):
         """Currently identical to the base variant but defined separately for camera tasks."""
@@ -132,3 +166,5 @@ class SoArm100CameraLiftCubeEnvCfg(SoArm100LiftCubeEnvCfg):
                 focal_length=18.0, focus_distance=4.0, horizontal_aperture=32.0, clipping_range=(0.1, 1.0e5)
             ),
         )
+                
+        self.observations = SoArm100CameraLiftCubeEnvCfg.ObservationsCfg()
