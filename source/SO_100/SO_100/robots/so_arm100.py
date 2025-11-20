@@ -46,9 +46,9 @@ SO_ARM100_CFG = ArticulationCfg(
         rot=(0.7071068, 0.0, 0.0, 0.7071068),  # Quaternion for 90 degrees rotation around Y-axis
         joint_pos={
             "Shoulder_Rotation": 0.0,
-            "Shoulder_Pitch": 0.0,
-            "Elbow": 0.0,
-            "Wrist_Pitch": 0.0,
+            "Shoulder_Pitch": 1.0,
+            "Elbow": 1.0,
+            "Wrist_Pitch": 1.0,
             "Wrist_Roll": 0.0,
             "Gripper": 0.3,  # Middle position to make movement more apparent
         },

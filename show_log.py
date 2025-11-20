@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 KEYWORDS = [
     "Episode_Reward/reaching_object:",
     "Episode_Reward/lifting_object:",
+    "Episode_Reward/object_goal_tracking:"
 ]
 
 # log 文件路径
