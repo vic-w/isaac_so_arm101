@@ -229,7 +229,7 @@ class RewardsCfg:
 
     gripper_condition = RewTerm(
         func=object_ee_distance_vs_gripper,
-        weight=0.0,
+        weight=0.1,
     )
 
 @configclass
