@@ -152,6 +152,51 @@ class EventCfg:
         },
     )
 
+import torch
+from isaaclab.envs import ManagerBasedRLEnv
+def object_ee_distance_vs_gripper(
+    env: ManagerBasedRLEnv,
+    threshold: float = 0.015,     # 2 cm
+    grip_thresh: float = 0.3,    # desired gripper joint angle
+    object_cfg: SceneEntityCfg = SceneEntityCfg("object"),
+    ee_frame_cfg: SceneEntityCfg = SceneEntityCfg("ee_frame"),
+    gripper_joint_name: str = "Gripper",
+) -> torch.Tensor:
+    """Reward rule:
+    - If EE–Object distance > 2cm, Gripper > 0.3
+    - Else (<=2cm), Gripper < 0.3
+    """
+
+    # Object pos
+    object: RigidObject = env.scene[object_cfg.name]
+    cube_pos_w = object.data.root_pos_w
+
+    # EE pos
+    ee_frame: FrameTransformer = env.scene[ee_frame_cfg.name]
+    ee_w = ee_frame.data.target_pos_w[..., 0, :]
+
+    # Distance
+    dist = torch.norm(cube_pos_w - ee_w, dim=1)
+    #print('dist:',dist)
+
+    # Gripper joint
+    robot = env.scene["robot"]
+    # 找到 gripper joint index
+    idx = robot.joint_names.index(gripper_joint_name)
+    grip_pos = robot.data.joint_pos[:, idx]
+    #print('grip_pos:', grip_pos)
+
+    # 条件奖励
+    # case A: 远于 2 cm -> gripper open (> 0.3)
+    reward_far = (dist > threshold) * (grip_pos - grip_thresh)
+
+    # case B: 近于等于 2 cm -> gripper close (< 0.3)
+    reward_close = (dist <= threshold) * (grip_thresh - grip_pos)
+    #print(reward_far, reward_close)
+
+    # Combine (float tensor)
+    return reward_far + reward_close
+
 
 @configclass
 class RewardsCfg:
@@ -182,6 +227,10 @@ class RewardsCfg:
         params={"asset_cfg": SceneEntityCfg("robot")},
     )
 
+    gripper_condition = RewTerm(
+        func=object_ee_distance_vs_gripper,
+        weight=0.0,
+    )
 
 @configclass
 class TerminationsCfg:

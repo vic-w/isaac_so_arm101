@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 # --------------------------------------
 KEYWORDS = [
     "Episode_Reward/reaching_object:",
+    "Episode_Reward/gripper_condition:",
     "Episode_Reward/lifting_object:",
     "Episode_Reward/object_goal_tracking:"
 ]
