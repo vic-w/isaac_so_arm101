@@ -146,7 +146,14 @@ class EventCfg:
         func=mdp.reset_root_state_uniform,
         mode="reset",
         params={
-            "pose_range": {"x": (-0.1, 0.1), "y": (-0.2, 0.2), "z": (0.0, 0.0)},
+            "pose_range": {
+                "x": (-0.1, 0.1), 
+                "y": (-0.2, 0.2), 
+                "z": (0.0, 0.0),                
+                "roll": (-3.14159, 3.14159),
+                "pitch": (-3.14159, 3.14159),
+                "yaw": (-3.14159, 3.14159),
+            },
             "velocity_range": {},
             "asset_cfg": SceneEntityCfg("object", body_names="Object"),
         },
@@ -157,7 +164,7 @@ from isaaclab.envs import ManagerBasedRLEnv
 def object_ee_distance_vs_gripper(
     env: ManagerBasedRLEnv,
     threshold: float = 0.015,     # 2 cm
-    grip_thresh: float = 0.3,    # desired gripper joint angle
+    grip_thresh: float = 0.25,    # desired gripper joint angle
     object_cfg: SceneEntityCfg = SceneEntityCfg("object"),
     ee_frame_cfg: SceneEntityCfg = SceneEntityCfg("ee_frame"),
     gripper_joint_name: str = "Gripper",
@@ -177,14 +184,12 @@ def object_ee_distance_vs_gripper(
 
     # Distance
     dist = torch.norm(cube_pos_w - ee_w, dim=1)
-    #print('dist:',dist)
 
     # Gripper joint
     robot = env.scene["robot"]
     # 找到 gripper joint index
     idx = robot.joint_names.index(gripper_joint_name)
     grip_pos = robot.data.joint_pos[:, idx]
-    #print('grip_pos:', grip_pos)
 
     # 条件奖励
     # case A: 远于 2 cm -> gripper open (> 0.3)
@@ -192,10 +197,30 @@ def object_ee_distance_vs_gripper(
 
     # case B: 近于等于 2 cm -> gripper close (< 0.3)
     reward_close = (dist <= threshold) * (grip_thresh - grip_pos)
-    #print(reward_far, reward_close)
+
+    penalty_too_wide = (grip_pos > 0.45) * (grip_pos - 0.45) * 5
+
+    if env.num_envs == 1:
+        print('-------------------------------')
+        print('dist:',dist.item())
+        print('grip_pos:', grip_pos.item())
+        print('reward far:',reward_far.item())
+        print('reward close:', reward_close.item())
+        print('penalty wide:', penalty_too_wide.item())
+        print('-------------------------------')
+    # else:
+    #     print('-------------------------------')
+    #     print('dist:',dist)
+    #     print('grip_pos:', grip_pos)
+    #     print('reward far:',reward_far)
+    #     print('reward close:', reward_close)
+    #     print('1', grip_pos > 0.45)
+    #     print('2', grip_pos - 0.45)
+    #     print('penalty wide:', penalty_too_wide)
+    #     print('-------------------------------')
 
     # Combine (float tensor)
-    return reward_far + reward_close
+    return reward_far + reward_close - penalty_too_wide
 
 
 @configclass
@@ -229,7 +254,7 @@ class RewardsCfg:
 
     gripper_condition = RewTerm(
         func=object_ee_distance_vs_gripper,
-        weight=0.1,
+        weight=0.001,
     )
 
 @configclass
