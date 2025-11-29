@@ -148,7 +148,7 @@ class EventCfg:
         params={
             "pose_range": {
                 "x": (-0.1, 0.1), 
-                "y": (-0.2, 0.2), 
+                "y": (-0.1, 0.1), 
                 "z": (0.0, 0.0),                
                 "roll": (-3.14159, 3.14159),
                 "pitch": (-3.14159, 3.14159),
@@ -198,15 +198,23 @@ def object_ee_distance_vs_gripper(
     # case B: 近于等于 2 cm -> gripper close (< 0.3)
     reward_close = (dist <= threshold) * (grip_thresh - grip_pos)
 
-    penalty_too_wide = (grip_pos > 0.45) * (grip_pos - 0.45) * 5
+    reward_arrive = (dist <= threshold) * 1.0
 
-    if env.num_envs == 1:
+    penalty_too_wide = (grip_pos > 0.45) * (grip_pos - 0.45) * 10
+
+    action_now = env.action_manager.action
+
+
+    if True:#env.num_envs == 1:
         print('-------------------------------')
-        print('dist:',dist.item())
-        print('grip_pos:', grip_pos.item())
-        print('reward far:',reward_far.item())
-        print('reward close:', reward_close.item())
-        print('penalty wide:', penalty_too_wide.item())
+        print('dist:',dist[0].cpu().numpy())
+        print("Action:", action_now[0].cpu().numpy())
+        print('joint pos:', robot.data.joint_pos[0].cpu().numpy())
+        print('reward far:',reward_far[0].cpu().numpy())
+        print('reward close:', reward_close[0].cpu().numpy())
+        print('reward arrive:', reward_arrive[0].cpu().numpy())
+        print('penalty wide:', penalty_too_wide[0].cpu().numpy())
+        print('gripper reward:', reward_far[0].cpu().numpy() + reward_close[0].cpu().numpy() + reward_arrive[0].cpu().numpy() - penalty_too_wide[0].cpu().numpy())
         print('-------------------------------')
     # else:
     #     print('-------------------------------')
@@ -220,7 +228,47 @@ def object_ee_distance_vs_gripper(
     #     print('-------------------------------')
 
     # Combine (float tensor)
-    return reward_far + reward_close - penalty_too_wide
+    return reward_far + reward_close + reward_arrive - penalty_too_wide
+
+def lift_while_open(
+    env: ManagerBasedRLEnv,
+    threshold_dist: float = 0.015,   # 1.5 cm
+    grip_thresh: float = 0.25,
+    max_height: float = 0.1,        # 5 cm
+    object_cfg: SceneEntityCfg = SceneEntityCfg("object"),
+    ee_frame_cfg: SceneEntityCfg = SceneEntityCfg("ee_frame"),
+    gripper_joint_name: str = "Gripper",
+) -> torch.Tensor:
+
+    # Object position
+    object: RigidObject = env.scene[object_cfg.name]
+    cube_pos_w = object.data.root_pos_w
+
+    # End-effector position (root of gripper)
+    ee_frame: FrameTransformer = env.scene[ee_frame_cfg.name]
+    ee_w = ee_frame.data.target_pos_w[..., 0, :]  # (num_envs,3)
+
+    # distance
+    dist = torch.norm(cube_pos_w - ee_w, dim=1)
+
+    # read gripper joint position
+    robot = env.scene["robot"]
+    idx = robot.joint_names.index(gripper_joint_name)
+    grip_pos = robot.data.joint_pos[:, idx]
+
+    # get the z coordinate of EE tip
+    ee_tip_z = ee_w[:, 2]
+
+    # Condition mask
+    active = (dist < threshold_dist) & (grip_pos < grip_thresh)
+    print('active:', active)
+
+    # normalized height reward with saturation
+    height_reward = torch.clamp(ee_tip_z / max_height, min=0.0, max=1.0)
+    print('height_reward:', height_reward)
+
+    # only apply when conditions satisfied
+    return active * height_reward
 
 
 @configclass
@@ -229,17 +277,17 @@ class RewardsCfg:
 
     reaching_object = RewTerm(func=mdp.object_ee_distance, params={"std": 0.05}, weight=1.0)
 
-    lifting_object = RewTerm(func=mdp.object_is_lifted, params={"minimal_height": 0.04}, weight=15.0)
+    lifting_object = RewTerm(func=mdp.object_is_lifted, params={"minimal_height": 0.02}, weight=15.0)
 
     object_goal_tracking = RewTerm(
         func=mdp.object_goal_distance,
-        params={"std": 0.3, "minimal_height": 0.04, "command_name": "object_pose"},
+        params={"std": 0.3, "minimal_height": 0.02, "command_name": "object_pose"},
         weight=16.0,
     )
 
     object_goal_tracking_fine_grained = RewTerm(
         func=mdp.object_goal_distance,
-        params={"std": 0.05, "minimal_height": 0.04, "command_name": "object_pose"},
+        params={"std": 0.05, "minimal_height": 0.02, "command_name": "object_pose"},
         weight=5.0,
     )
 
@@ -254,7 +302,12 @@ class RewardsCfg:
 
     gripper_condition = RewTerm(
         func=object_ee_distance_vs_gripper,
-        weight=0.001,
+        weight=0.1,
+    )
+
+    lift_when_gripper_open = RewTerm(
+        func=lift_while_open,
+        weight=0.1,   # 你可以调整
     )
 
 @configclass

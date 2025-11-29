@@ -159,6 +159,8 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
     )
 
     dt = env.unwrapped.step_dt
+    fp = open('action_log.txt', 'w')
+
 
     # reset environment
     obs, _ = env.get_observations()
@@ -170,6 +172,8 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
         with torch.inference_mode():
             # agent stepping
             actions = policy(obs)
+            fp.write('%.4f\n' % actions.cpu().numpy()[0][5])  # log gripper action
+            fp.flush()
             # env stepping
             obs, _, _, _ = env.step(actions)
         if args_cli.video:
@@ -185,6 +189,7 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
 
     # close the simulator
     env.close()
+    fp.close()
 
 
 if __name__ == "__main__":

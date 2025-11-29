@@ -4,6 +4,8 @@
 **/*.so
 **/*.log*
 log.txt
+action_logs
+action_log.txt
 
 # Omniverse
 **/*.dmp
