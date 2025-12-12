@@ -43,6 +43,14 @@ import isaaclab_tasks.manager_based.manipulation.lift.mdp as mdp
 
 from SO_100.robots import SO_ARM100_CFG 
 
+
+from isaaclab.managers import ObservationGroupCfg as ObsGroup
+from isaaclab.managers import ObservationTermCfg as ObsTerm
+from isaaclab.envs.mdp import observations as mdp_obs
+from isaaclab.managers import SceneEntityCfg
+from isaaclab.sensors.camera import CameraCfg
+import isaaclab.sim as sim_utils
+
 ##
 # Scene definition
 ##
@@ -96,7 +104,7 @@ class CommandsCfg:
         asset_name="robot",
         body_name=MISSING,  # will be set by agent env cfg
         resampling_time_range=(5.0, 5.0),
-        debug_vis=True,
+        debug_vis=False,
         ranges=mdp.UniformPoseCommandCfg.Ranges(
             pos_x=(-0.1, 0.1),
             pos_y=(-0.3, -0.1),
@@ -162,17 +170,17 @@ class RewardsCfg:
 
     reaching_object = RewTerm(func=mdp.object_ee_distance, params={"std": 0.05}, weight=1.0)
 
-    lifting_object = RewTerm(func=mdp.object_is_lifted, params={"minimal_height": 0.04}, weight=15.0)
+    lifting_object = RewTerm(func=mdp.object_is_lifted, params={"minimal_height": 0.01}, weight=15.0)
 
     object_goal_tracking = RewTerm(
         func=mdp.object_goal_distance,
-        params={"std": 0.3, "minimal_height": 0.04, "command_name": "object_pose"},
+        params={"std": 0.3, "minimal_height": 0.01, "command_name": "object_pose"},
         weight=16.0,
     )
 
     object_goal_tracking_fine_grained = RewTerm(
         func=mdp.object_goal_distance,
-        params={"std": 0.05, "minimal_height": 0.04, "command_name": "object_pose"},
+        params={"std": 0.05, "minimal_height": 0.01, "command_name": "object_pose"},
         weight=5.0,
     )
 
@@ -324,4 +332,55 @@ class SoArm100CubeCubeLiftEnvCfg_PLAY(SoArm100CubeCubeLiftEnvCfg):
         self.scene.env_spacing = 2.5
         # disable randomization for play
         self.observations.policy.enable_corruption = False
+
+
+@configclass
+class CameraObservationsCfg:
+    """Override observations to add image features."""
+    @configclass
+    class PolicyCfg(ObsGroup):
+        joint_pos = ObsTerm(func=mdp.joint_pos_rel)
+        joint_vel = ObsTerm(func=mdp.joint_vel_rel)
+        #object_position = ObsTerm(func=mdp.object_position_in_robot_root_frame)
+        target_object_position = ObsTerm(func=mdp.generated_commands, params={"command_name": "object_pose"})
+        actions = ObsTerm(func=mdp.last_action)
+        camera_image_features = ObsTerm(
+            func=mdp_obs.image_features,
+            params={
+                "sensor_cfg": SceneEntityCfg("camera"),
+                "data_type": "rgb",
+                "model_name": "resnet18",
+            },
+        )
+
+        # 决定是否 concat（一般保持 true）
+        def __post_init__(self):
+            self.enable_corruption = False
+            self.concatenate_terms = True
+
+    policy: PolicyCfg = PolicyCfg()
+
+
+@configclass
+class SoArm100CameraLiftCubeEnvCfg(SoArm100CubeCubeLiftEnvCfg):
+    """Camera-ready variant of the default cube lifting environment."""
+    def __post_init__(self):
+        """Currently identical to the base variant but defined separately for camera tasks."""
+        super().__post_init__()
+        self.scene.camera = CameraCfg(
+            prim_path="{ENV_REGEX_NS}/Robot/Fixed_Gripper/Camera",
+            update_period=0.0,
+            height=480,
+            width=640,
+            data_types=("rgb",),
+            offset=CameraCfg.OffsetCfg(
+                pos=[0.0, -0.1, 0.0],
+                rot=[0.96593, -0.25882, 0.0, 0.0],
+            ),
+            spawn=sim_utils.PinholeCameraCfg(
+                focal_length=18.0, focus_distance=4.0, horizontal_aperture=32.0, clipping_range=(0.01, 1.0e5)
+            ),
+        )
+        self.observations = CameraObservationsCfg()
+
 

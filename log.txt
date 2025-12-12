@@ -1,0 +1,2150 @@
+Loading user config located at: '/home/dex/isaacsim/kit/data/Kit/Isaac-Sim/5.0/user.config.json'
+[Info] [carb] Logging to file: /home/dex/isaacsim/kit/logs/Kit/Isaac-Sim/5.0/kit_20251212_143231.log
+2025-12-12T06:32:32Z [632ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Graphics (ADL-S GT1)
+2025-12-12T06:32:32Z [632ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: Intel(R) Graphics (ADL-S GT1)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.181       | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 3090          | Yes: 0 |     | 24822   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2204      | 17b7df87.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | Intel(R) Graphics (ADL-S GT1)    |        |     | 48001   MB | 8086      | 0          |
+|     |                                  |        |     |            | 4680      | fd8cf190.. |
+|     |                                  |        |     |            | 0         |            |
+|=============================================================================================|
+| OS: 22.04.1 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.1, Kernel: 5.15.0-43-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101003 (1.21.1.3)
+| Processor: 12th Gen Intel(R) Core(TM) i7-12700
+| Cores: 12 | Logical Cores: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 64002 | Free Memory: 57112
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 2028
+|---------------------------------------------------------------------------------------------|
+2025-12-12T06:32:32Z [888ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2025-12-12T06:32:35Z [4,232ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2025-12-12T06:32:36Z [4,557ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2025-12-12T06:32:37Z [6,262ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2025-12-12T06:32:38Z [6,499ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2025-12-12T06:32:40Z [8,593ms] [Warning] [usdrt.population.plugin] using high frequency span is disabled
+2025-12-12T06:32:40Z [8,612ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 9
+
+2025-12-12T06:32:40Z [8,717ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [carb::dictionary::ISerializer v1.1] (plugin: carb.dictionary.serializer-json.plugin), by client: carb.scenerenderer-rtx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/dex/isaaclab/apps/isaaclab.python.rendering.kit
+[INFO]: Parsing configuration from: SO_100.tasks.lift.lift_env_cfg:SoArm100CameraLiftCubeEnvCfg
+[INFO]: Parsing configuration from: SO_100.tasks.lift.agents.rsl_rl_ppo_cfg:LiftCubePPORunnerCfg
+[INFO] Logging experiment in directory: /home/dex/user_data/wd/isaac_so_arm101/logs/rsl_rl/so_arm100_lift
+Exact experiment name requested from command line: 2025-12-12_14-32-43
+Setting seed: 42
+[2025-12-12 14:32:43,240][ogn_registration][INFO] - Looking for Python nodes to register in omni.physx.fabric-107.3.18
+[2025-12-12 14:32:43,241][ogn_registration][INFO] -  -> Registered nodes from module omni.physxfabric at /home/dex/isaacsim/extscache/omni.physx.fabric-107.3.18+107.3.1.lx64.r.cp311.u353
+[2025-12-12 14:32:43,241][ogn_registration][INFO] - Registering nodes in /home/dex/isaacsim/extscache/omni.physx.fabric-107.3.18+107.3.1.lx64.r.cp311.u353 imported as omni.physxfabric with AutoNode config {}
+[2025-12-12 14:32:43,241][ogn_registration][INFO] - Registering Python Node Types from omni.physxfabric at /home/dex/isaacsim/extscache/omni.physx.fabric-107.3.18+107.3.1.lx64.r.cp311.u353 in omni.physx.fabric
+[2025-12-12 14:32:43,241][ogn_registration][INFO] - ========================================================================================================================
+[2025-12-12 14:32:43,241][ogn_registration][INFO] - No dependency on omni.graph, therefore no nodes to register in omni.physx.fabric
+[2025-12-12 14:32:43,241][ogn_registration][INFO] - ...None found, no registration to do
+[2025-12-12 14:32:43,241][ogn_registration][INFO] - ...Skipping: No OmniGraph presence in the module omni.physxfabric - No nodes in this module, do not remember it
+[2025-12-12 14:32:43,241][ogn_registration][INFO] - Destroying registration record for omni.physx.fabric
+[2025-12-12 14:32:43,241][ogn_registration][INFO] - OGN register omni.physx.fabric-107.3.18 took 997642.000000
+2025-12-12T06:32:41Z [10,220ms] [Warning] [usdrt.hydra.fabric_scene_delegate.plugin] using high frequency span is disabled
+2025-12-12T06:32:41Z [10,221ms] [Warning] [usdrt.hydra.fabric_scene_delegate.plugin] using high frequency span is disabled
+2025-12-12T06:32:41Z [10,221ms] [Warning] [usdrt.hydra.fabric_scene_delegate.plugin] using high frequency span with attrs is disabled
+2025-12-12T06:32:42Z [10,389ms] [Warning] [usdrt.hydra.fabric_scene_delegate.plugin] using high frequency span is disabled
+2025-12-12T06:32:42Z [10,389ms] [Warning] [usdrt.hydra.fabric_scene_delegate.plugin] using high frequency span is disabled
+2025-12-12T06:32:49Z [17,706ms] [Warning] [carb] Client omni.hydratexture.plugin has acquired [carb::settings::ISettings v1.0] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2025-12-12T06:32:49Z [17,784ms] [Warning] [carb] Client omni.hydratexture.plugin has acquired [carb::dictionary::IDictionary v1.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2025-12-12T06:32:55Z [24,008ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,014ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,014ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,015ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,015ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,015ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,015ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,016ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,016ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,016ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,016ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,016ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,018ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,018ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,018ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,018ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,018ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,018ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,019ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,019ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,020ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,021ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,021ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,021ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,021ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,022ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,022ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,022ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,022ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,022ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,023ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,023ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,023ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,023ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,024ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,024ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,024ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,024ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,024ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,024ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,025ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,025ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,027ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,028ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,028ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,029ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,029ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,029ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,029ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,030ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,030ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,030ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,031ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,031ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,031ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,031ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,031ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,032ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,033ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,033ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,034ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,034ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,034ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,034ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,035ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,035ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,035ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,035ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,036ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,036ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,037ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,037ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,037ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,037ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,038ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,038ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,038ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,038ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,038ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,039ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,039ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,039ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,039ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,039ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,040ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,040ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,040ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,040ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,040ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,041ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,041ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,042ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,042ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,042ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,042ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,043ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,043ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,043ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,043ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,044ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,044ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,044ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,044ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,044ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,044ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,045ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:reflection_roughness_constant)
+2025-12-12T06:32:55Z [24,045ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+2025-12-12T06:32:55Z [24,045ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,045ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:transmittance_color)
+2025-12-12T06:32:55Z [24,046ms] [Warning] [usdrt.population.plugin] [UsdNoticeHandler] Unhandled attribute type VtArray<std::string> (prim attribute: omni:rtx:material:db:flattener:ior_constant)
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 42
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[INFO]: Time taken for scene creation : 5.494902 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 40
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 9.940432 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------+
+|           Active Command Terms           |
++-------+-------------+--------------------+
+| Index | Name        |        Type        |
++-------+-------------+--------------------+
+|   0   | object_pose | UniformPoseCommand |
++-------+-------------+--------------------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'reset'  |
++---------+----------------------------+
+|  Index  | Name                       |
++---------+----------------------------+
+|    0    | reset_all                  |
+|    1    | reset_object_position      |
++---------+----------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 2 active terms.
++------------------------------------+
+|   Active Action Terms (shape: 6)   |
++-------+----------------+-----------+
+| Index | Name           | Dimension |
++-------+----------------+-----------+
+|   0   | arm_action     |         5 |
+|   1   | gripper_action |         1 |
++-------+----------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (1025,)) |
++----------+------------------------------------+-------------+
+|  Index   | Name                               |    Shape    |
++----------+------------------------------------+-------------+
+|    0     | joint_pos                          |     (6,)    |
+|    1     | joint_vel                          |     (6,)    |
+|    2     | target_object_position             |     (7,)    |
+|    3     | actions                            |     (6,)    |
+|    4     | camera_image_features              |   (1000,)   |
++----------+------------------------------------+-------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++------------------------------------+
+|      Active Termination Terms      |
++-------+-----------------+----------+
+| Index | Name            | Time Out |
++-------+-----------------+----------+
+|   0   | time_out        |   True   |
+|   1   | object_dropping |  False   |
++-------+-----------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 6 active terms.
++-----------------------------------------------------+
+|                 Active Reward Terms                 |
++-------+-----------------------------------+---------+
+| Index | Name                              |  Weight |
++-------+-----------------------------------+---------+
+|   0   | reaching_object                   |     1.0 |
+|   1   | lifting_object                    |    15.0 |
+|   2   | object_goal_tracking              |    16.0 |
+|   3   | object_goal_tracking_fine_grained |     5.0 |
+|   4   | action_rate                       | -0.0001 |
+|   5   | joint_vel                         | -0.0001 |
++-------+-----------------------------------+---------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 2 active terms.
++--------------------------+
+| Active Curriculum Terms  |
++---------+----------------+
+|  Index  | Name           |
++---------+----------------+
+|    0    | action_rate    |
+|    1    | joint_vel      |
++---------+----------------+
+
+Creating window for environment.
+[INFO]: Completed setting up the environment...
+Actor MLP: Sequential(
+  (0): Linear(in_features=1025, out_features=256, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=256, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=6, bias=True)
+)
+Critic MLP: Sequential(
+  (0): Linear(in_features=1025, out_features=256, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=256, out_features=128, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=128, out_features=64, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=64, out_features=1, bias=True)
+)
+[INFO]: Loading model checkpoint from: /home/dex/user_data/wd/isaac_so_arm101/logs/rsl_rl/so_arm100_lift/2025-12-12_13-30-52/model_750.pt
+################################################################################
+                     [1m Learning iteration 750/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.562s, learning 0.116s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.1836
+               Mean surrogate loss: 0.0001
+                 Mean entropy loss: 8.4109
+                       Mean reward: 0.32
+               Mean episode length: 19.00
+    Episode_Reward/reaching_object: 0.0009
+     Episode_Reward/lifting_object: 0.0325
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0000
+          Episode_Reward/joint_vel: -0.0000
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.0668
+Metrics/object_pose/orientation_error: 1.6982
+      Episode_Termination/time_out: 0.0250
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 960
+                    Iteration time: 7.68s
+                      Time elapsed: 00:00:07
+                               ETA: 07:59:32
+
+Could not find git repository in /home/dex/miniconda3/envs/env_isaaclab/lib/python3.11/site-packages/rsl_rl/__init__.py. Skipping.
+Storing git diff for 'isaac_so_arm101' in: /home/dex/user_data/wd/isaac_so_arm101/logs/rsl_rl/so_arm100_lift/2025-12-12_14-32-43/git/isaac_so_arm101.diff
+################################################################################
+                     [1m Learning iteration 751/15750 [0m                     
+
+                       Computation: 144 steps/s (collection: 6.610s, learning 0.046s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.6149
+               Mean surrogate loss: -0.0097
+                 Mean entropy loss: 8.4116
+                       Mean reward: 0.31
+               Mean episode length: 25.86
+    Episode_Reward/reaching_object: 0.0003
+     Episode_Reward/lifting_object: 0.0600
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0002
+          Episode_Reward/joint_vel: -0.0001
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1695
+Metrics/object_pose/orientation_error: 3.1149
+      Episode_Termination/time_out: 0.1438
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1920
+                    Iteration time: 6.66s
+                      Time elapsed: 00:00:14
+                               ETA: 05:51:39
+
+################################################################################
+                     [1m Learning iteration 752/15750 [0m                     
+
+                       Computation: 140 steps/s (collection: 6.774s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.5644
+               Mean surrogate loss: -0.0049
+                 Mean entropy loss: 8.4140
+                       Mean reward: 0.59
+               Mean episode length: 43.64
+    Episode_Reward/reaching_object: 0.0243
+     Episode_Reward/lifting_object: 0.0850
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0003
+          Episode_Reward/joint_vel: -0.0001
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1984
+Metrics/object_pose/orientation_error: 3.0278
+      Episode_Termination/time_out: 0.2594
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 2880
+                    Iteration time: 6.82s
+                      Time elapsed: 00:00:21
+                               ETA: 05:22:46
+
+################################################################################
+                     [1m Learning iteration 753/15750 [0m                     
+
+                       Computation: 153 steps/s (collection: 6.204s, learning 0.046s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.9937
+               Mean surrogate loss: 0.0035
+                 Mean entropy loss: 8.4143
+                       Mean reward: 0.75
+               Mean episode length: 46.73
+    Episode_Reward/reaching_object: 0.0551
+     Episode_Reward/lifting_object: 0.1825
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0005
+          Episode_Reward/joint_vel: -0.0002
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1807
+Metrics/object_pose/orientation_error: 3.0403
+      Episode_Termination/time_out: 0.3573
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 3840
+                    Iteration time: 6.25s
+                      Time elapsed: 00:00:27
+                               ETA: 04:32:29
+
+################################################################################
+                     [1m Learning iteration 754/15750 [0m                     
+
+                       Computation: 139 steps/s (collection: 6.820s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.5987
+               Mean surrogate loss: -0.0055
+                 Mean entropy loss: 8.4139
+                       Mean reward: 1.24
+               Mean episode length: 62.55
+    Episode_Reward/reaching_object: 0.1248
+     Episode_Reward/lifting_object: 0.4100
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0006
+          Episode_Reward/joint_vel: -0.0002
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1883
+Metrics/object_pose/orientation_error: 3.0527
+      Episode_Termination/time_out: 0.4323
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 4800
+                    Iteration time: 6.87s
+                      Time elapsed: 00:00:34
+                               ETA: 04:33:08
+
+################################################################################
+                     [1m Learning iteration 755/15750 [0m                     
+
+                       Computation: 134 steps/s (collection: 7.101s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.5576
+               Mean surrogate loss: -0.0007
+                 Mean entropy loss: 8.4133
+                       Mean reward: 1.89
+               Mean episode length: 77.12
+    Episode_Reward/reaching_object: 0.1652
+     Episode_Reward/lifting_object: 0.6775
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0007
+          Episode_Reward/joint_vel: -0.0004
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1960
+Metrics/object_pose/orientation_error: 3.0799
+      Episode_Termination/time_out: 0.5500
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 5760
+                    Iteration time: 7.15s
+                      Time elapsed: 00:00:41
+                               ETA: 04:45:15
+
+################################################################################
+                     [1m Learning iteration 756/15750 [0m                     
+
+                       Computation: 132 steps/s (collection: 7.218s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.4013
+               Mean surrogate loss: -0.0099
+                 Mean entropy loss: 8.4125
+                       Mean reward: 1.89
+               Mean episode length: 80.12
+    Episode_Reward/reaching_object: 0.2089
+     Episode_Reward/lifting_object: 0.2800
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0009
+          Episode_Reward/joint_vel: -0.0005
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2115
+Metrics/object_pose/orientation_error: 3.1375
+      Episode_Termination/time_out: 0.6396
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 6720
+                    Iteration time: 7.27s
+                      Time elapsed: 00:00:48
+                               ETA: 04:58:03
+
+################################################################################
+                     [1m Learning iteration 757/15750 [0m                     
+
+                       Computation: 129 steps/s (collection: 7.360s, learning 0.046s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2246
+               Mean surrogate loss: -0.0091
+                 Mean entropy loss: 8.4123
+                       Mean reward: 2.16
+               Mean episode length: 83.56
+    Episode_Reward/reaching_object: 0.2497
+     Episode_Reward/lifting_object: 1.3300
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0009
+          Episode_Reward/joint_vel: -0.0006
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1495
+Metrics/object_pose/orientation_error: 3.1294
+      Episode_Termination/time_out: 0.6708
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 7680
+                    Iteration time: 7.41s
+                      Time elapsed: 00:00:56
+                               ETA: 05:12:03
+
+################################################################################
+                     [1m Learning iteration 758/15750 [0m                     
+
+                       Computation: 129 steps/s (collection: 7.353s, learning 0.044s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3161
+               Mean surrogate loss: 0.0078
+                 Mean entropy loss: 8.4127
+                       Mean reward: 3.01
+               Mean episode length: 98.77
+    Episode_Reward/reaching_object: 0.3154
+     Episode_Reward/lifting_object: 1.6225
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0011
+          Episode_Reward/joint_vel: -0.0013
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2508
+Metrics/object_pose/orientation_error: 3.0879
+      Episode_Termination/time_out: 0.7396
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 8640
+                    Iteration time: 7.40s
+                      Time elapsed: 00:01:03
+                               ETA: 05:22:38
+
+################################################################################
+                     [1m Learning iteration 759/15750 [0m                     
+
+                       Computation: 128 steps/s (collection: 7.411s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3332
+               Mean surrogate loss: -0.0091
+                 Mean entropy loss: 8.4127
+                       Mean reward: 3.48
+               Mean episode length: 127.80
+    Episode_Reward/reaching_object: 0.3111
+     Episode_Reward/lifting_object: 0.6733
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0012
+          Episode_Reward/joint_vel: -0.0005
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3689
+Metrics/object_pose/orientation_error: 2.5842
+      Episode_Termination/time_out: 0.8990
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 9600
+                    Iteration time: 7.46s
+                      Time elapsed: 00:01:10
+                               ETA: 05:32:36
+
+################################################################################
+                     [1m Learning iteration 760/15750 [0m                     
+
+                       Computation: 129 steps/s (collection: 7.379s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3541
+               Mean surrogate loss: -0.0086
+                 Mean entropy loss: 8.4125
+                       Mean reward: 3.46
+               Mean episode length: 130.78
+    Episode_Reward/reaching_object: 0.3639
+     Episode_Reward/lifting_object: 0.8438
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0005
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2499
+Metrics/object_pose/orientation_error: 2.8799
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 10560
+                    Iteration time: 7.43s
+                      Time elapsed: 00:01:18
+                               ETA: 05:40:01
+
+################################################################################
+                     [1m Learning iteration 761/15750 [0m                     
+
+                       Computation: 128 steps/s (collection: 7.423s, learning 0.044s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3209
+               Mean surrogate loss: -0.0131
+                 Mean entropy loss: 8.4136
+                       Mean reward: 3.84
+               Mean episode length: 143.74
+    Episode_Reward/reaching_object: 0.4011
+     Episode_Reward/lifting_object: 0.7650
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0007
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2312
+Metrics/object_pose/orientation_error: 3.0045
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 11520
+                    Iteration time: 7.47s
+                      Time elapsed: 00:01:25
+                               ETA: 05:47:01
+
+################################################################################
+                     [1m Learning iteration 762/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.622s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.4378
+               Mean surrogate loss: -0.0074
+                 Mean entropy loss: 8.4133
+                       Mean reward: 4.72
+               Mean episode length: 154.16
+    Episode_Reward/reaching_object: 0.4196
+     Episode_Reward/lifting_object: 1.6625
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0007
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2154
+Metrics/object_pose/orientation_error: 3.1044
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 12480
+                    Iteration time: 7.67s
+                      Time elapsed: 00:01:33
+                               ETA: 05:56:48
+
+################################################################################
+                     [1m Learning iteration 763/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.632s, learning 0.048s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3244
+               Mean surrogate loss: -0.0038
+                 Mean entropy loss: 8.4132
+                       Mean reward: 4.71
+               Mean episode length: 159.48
+    Episode_Reward/reaching_object: 0.3252
+     Episode_Reward/lifting_object: 1.2975
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0010
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3112
+Metrics/object_pose/orientation_error: 3.0792
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 13440
+                    Iteration time: 7.68s
+                      Time elapsed: 00:01:41
+                               ETA: 06:05:22
+
+################################################################################
+                     [1m Learning iteration 764/15750 [0m                     
+
+                       Computation: 123 steps/s (collection: 7.724s, learning 0.044s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2886
+               Mean surrogate loss: -0.0127
+                 Mean entropy loss: 8.4134
+                       Mean reward: 4.80
+               Mean episode length: 165.72
+    Episode_Reward/reaching_object: 0.2305
+     Episode_Reward/lifting_object: 0.5800
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0006
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2818
+Metrics/object_pose/orientation_error: 2.9807
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 14400
+                    Iteration time: 7.77s
+                      Time elapsed: 00:01:48
+                               ETA: 06:14:15
+
+################################################################################
+                     [1m Learning iteration 765/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.611s, learning 0.045s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.4267
+               Mean surrogate loss: -0.0063
+                 Mean entropy loss: 8.4137
+                       Mean reward: 4.99
+               Mean episode length: 171.16
+    Episode_Reward/reaching_object: 0.3115
+     Episode_Reward/lifting_object: 1.2375
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0005
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2780
+Metrics/object_pose/orientation_error: 3.0054
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 15360
+                    Iteration time: 7.66s
+                      Time elapsed: 00:01:56
+                               ETA: 06:20:15
+
+################################################################################
+                     [1m Learning iteration 766/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.490s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.1789
+               Mean surrogate loss: -0.0120
+                 Mean entropy loss: 8.4135
+                       Mean reward: 5.63
+               Mean episode length: 175.94
+    Episode_Reward/reaching_object: 0.5183
+     Episode_Reward/lifting_object: 2.4900
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0010
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2946
+Metrics/object_pose/orientation_error: 2.8864
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 16320
+                    Iteration time: 7.54s
+                      Time elapsed: 00:02:04
+                               ETA: 06:23:47
+
+################################################################################
+                     [1m Learning iteration 767/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.460s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2069
+               Mean surrogate loss: -0.0066
+                 Mean entropy loss: 8.4130
+                       Mean reward: 5.60
+               Mean episode length: 177.04
+    Episode_Reward/reaching_object: 0.3497
+     Episode_Reward/lifting_object: 1.9150
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0008
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3167
+Metrics/object_pose/orientation_error: 3.0158
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 17280
+                    Iteration time: 7.51s
+                      Time elapsed: 00:02:11
+                               ETA: 06:26:30
+
+################################################################################
+                     [1m Learning iteration 768/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.497s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.4540
+               Mean surrogate loss: -0.0088
+                 Mean entropy loss: 8.4121
+                       Mean reward: 5.76
+               Mean episode length: 180.17
+    Episode_Reward/reaching_object: 0.3614
+     Episode_Reward/lifting_object: 0.8700
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0011
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3169
+Metrics/object_pose/orientation_error: 3.0479
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 18240
+                    Iteration time: 7.54s
+                      Time elapsed: 00:02:19
+                               ETA: 06:29:23
+
+################################################################################
+                     [1m Learning iteration 769/15750 [0m                     
+
+                       Computation: 128 steps/s (collection: 7.397s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2622
+               Mean surrogate loss: -0.0020
+                 Mean entropy loss: 8.4123
+                       Mean reward: 5.76
+               Mean episode length: 185.68
+    Episode_Reward/reaching_object: 0.4355
+     Episode_Reward/lifting_object: 1.0367
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0008
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2428
+Metrics/object_pose/orientation_error: 3.0488
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 19200
+                    Iteration time: 7.44s
+                      Time elapsed: 00:02:26
+                               ETA: 06:30:44
+
+################################################################################
+                     [1m Learning iteration 770/15750 [0m                     
+
+                       Computation: 124 steps/s (collection: 7.631s, learning 0.063s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.1730
+               Mean surrogate loss: -0.0075
+                 Mean entropy loss: 8.4124
+                       Mean reward: 5.77
+               Mean episode length: 188.90
+    Episode_Reward/reaching_object: 0.2901
+     Episode_Reward/lifting_object: 0.6000
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0012
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1984
+Metrics/object_pose/orientation_error: 3.1287
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 20160
+                    Iteration time: 7.69s
+                      Time elapsed: 00:02:34
+                               ETA: 06:34:55
+
+################################################################################
+                     [1m Learning iteration 771/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.488s, learning 0.044s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2435
+               Mean surrogate loss: -0.0095
+                 Mean entropy loss: 8.4132
+                       Mean reward: 6.08
+               Mean episode length: 192.49
+    Episode_Reward/reaching_object: 0.3164
+     Episode_Reward/lifting_object: 1.1950
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0015
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2862
+Metrics/object_pose/orientation_error: 2.8559
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 21120
+                    Iteration time: 7.53s
+                      Time elapsed: 00:02:41
+                               ETA: 06:36:52
+
+################################################################################
+                     [1m Learning iteration 772/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.473s, learning 0.048s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3204
+               Mean surrogate loss: -0.0044
+                 Mean entropy loss: 8.4153
+                       Mean reward: 6.32
+               Mean episode length: 195.08
+    Episode_Reward/reaching_object: 0.4981
+     Episode_Reward/lifting_object: 1.9563
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0043
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2037
+Metrics/object_pose/orientation_error: 3.1170
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 22080
+                    Iteration time: 7.52s
+                      Time elapsed: 00:02:49
+                               ETA: 06:38:31
+
+################################################################################
+                     [1m Learning iteration 773/15750 [0m                     
+
+                       Computation: 123 steps/s (collection: 7.715s, learning 0.051s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2602
+               Mean surrogate loss: -0.0078
+                 Mean entropy loss: 8.4154
+                       Mean reward: 6.25
+               Mean episode length: 198.00
+    Episode_Reward/reaching_object: 0.2792
+     Episode_Reward/lifting_object: 0.8950
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0010
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2434
+Metrics/object_pose/orientation_error: 3.1017
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 23040
+                    Iteration time: 7.77s
+                      Time elapsed: 00:02:57
+                               ETA: 06:42:34
+
+################################################################################
+                     [1m Learning iteration 774/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.614s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2465
+               Mean surrogate loss: -0.0077
+                 Mean entropy loss: 8.4154
+                       Mean reward: 6.39
+               Mean episode length: 198.55
+    Episode_Reward/reaching_object: 0.2738
+     Episode_Reward/lifting_object: 1.5725
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0009
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2484
+Metrics/object_pose/orientation_error: 3.0910
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 24000
+                    Iteration time: 7.66s
+                      Time elapsed: 00:03:04
+                               ETA: 06:45:14
+
+################################################################################
+                     [1m Learning iteration 775/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.600s, learning 0.045s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2379
+               Mean surrogate loss: -0.0056
+                 Mean entropy loss: 8.4152
+                       Mean reward: 6.73
+               Mean episode length: 201.12
+    Episode_Reward/reaching_object: 0.4797
+     Episode_Reward/lifting_object: 2.1825
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0014
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2232
+Metrics/object_pose/orientation_error: 3.0794
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 24960
+                    Iteration time: 7.65s
+                      Time elapsed: 00:03:12
+                               ETA: 06:47:32
+
+################################################################################
+                     [1m Learning iteration 776/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.587s, learning 0.049s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2355
+               Mean surrogate loss: -0.0069
+                 Mean entropy loss: 8.4158
+                       Mean reward: 7.06
+               Mean episode length: 212.61
+    Episode_Reward/reaching_object: 0.3716
+     Episode_Reward/lifting_object: 1.3138
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0008
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2059
+Metrics/object_pose/orientation_error: 3.0436
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 25920
+                    Iteration time: 7.64s
+                      Time elapsed: 00:03:20
+                               ETA: 06:49:34
+
+################################################################################
+                     [1m Learning iteration 777/15750 [0m                     
+
+                       Computation: 129 steps/s (collection: 7.356s, learning 0.042s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2419
+               Mean surrogate loss: -0.0044
+                 Mean entropy loss: 8.4170
+                       Mean reward: 7.25
+               Mean episode length: 214.77
+    Episode_Reward/reaching_object: 0.5640
+     Episode_Reward/lifting_object: 2.7300
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0037
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2580
+Metrics/object_pose/orientation_error: 3.1219
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 26880
+                    Iteration time: 7.40s
+                      Time elapsed: 00:03:27
+                               ETA: 06:49:19
+
+################################################################################
+                     [1m Learning iteration 778/15750 [0m                     
+
+                       Computation: 128 steps/s (collection: 7.404s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3172
+               Mean surrogate loss: -0.0058
+                 Mean entropy loss: 8.4175
+                       Mean reward: 7.35
+               Mean episode length: 218.79
+    Episode_Reward/reaching_object: 0.3024
+     Episode_Reward/lifting_object: 0.6300
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0008
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2089
+Metrics/object_pose/orientation_error: 3.0861
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 27840
+                    Iteration time: 7.45s
+                      Time elapsed: 00:03:34
+                               ETA: 06:49:33
+
+################################################################################
+                     [1m Learning iteration 779/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.464s, learning 0.045s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2138
+               Mean surrogate loss: -0.0065
+                 Mean entropy loss: 8.4174
+                       Mean reward: 8.04
+               Mean episode length: 230.01
+    Episode_Reward/reaching_object: 0.4215
+     Episode_Reward/lifting_object: 1.4167
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0008
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2569
+Metrics/object_pose/orientation_error: 3.0674
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 28800
+                    Iteration time: 7.51s
+                      Time elapsed: 00:03:42
+                               ETA: 06:50:14
+
+################################################################################
+                     [1m Learning iteration 780/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.511s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2974
+               Mean surrogate loss: -0.0023
+                 Mean entropy loss: 8.4178
+                       Mean reward: 8.48
+               Mean episode length: 238.61
+    Episode_Reward/reaching_object: 0.3891
+     Episode_Reward/lifting_object: 1.8800
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0015
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3197
+Metrics/object_pose/orientation_error: 3.0338
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 29760
+                    Iteration time: 7.56s
+                      Time elapsed: 00:03:50
+                               ETA: 06:51:15
+
+################################################################################
+                     [1m Learning iteration 781/15750 [0m                     
+
+                       Computation: 128 steps/s (collection: 7.452s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3341
+               Mean surrogate loss: -0.0025
+                 Mean entropy loss: 8.4171
+                       Mean reward: 8.80
+               Mean episode length: 241.02
+    Episode_Reward/reaching_object: 0.5720
+     Episode_Reward/lifting_object: 3.0638
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0033
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3484
+Metrics/object_pose/orientation_error: 3.0750
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 30720
+                    Iteration time: 7.50s
+                      Time elapsed: 00:03:57
+                               ETA: 06:51:45
+
+################################################################################
+                     [1m Learning iteration 782/15750 [0m                     
+
+                       Computation: 130 steps/s (collection: 7.337s, learning 0.047s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2861
+               Mean surrogate loss: -0.0080
+                 Mean entropy loss: 8.4159
+                       Mean reward: 8.87
+               Mean episode length: 245.29
+    Episode_Reward/reaching_object: 0.3672
+     Episode_Reward/lifting_object: 1.5000
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0006
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2333
+Metrics/object_pose/orientation_error: 3.0940
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 31680
+                    Iteration time: 7.38s
+                      Time elapsed: 00:04:04
+                               ETA: 06:51:20
+
+################################################################################
+                     [1m Learning iteration 783/15750 [0m                     
+
+                       Computation: 129 steps/s (collection: 7.379s, learning 0.044s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2684
+               Mean surrogate loss: -0.0062
+                 Mean entropy loss: 8.4157
+                       Mean reward: 9.11
+               Mean episode length: 248.00
+    Episode_Reward/reaching_object: 0.4931
+     Episode_Reward/lifting_object: 1.8900
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0013
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2818
+Metrics/object_pose/orientation_error: 3.0947
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 32640
+                    Iteration time: 7.42s
+                      Time elapsed: 00:04:12
+                               ETA: 06:51:13
+
+################################################################################
+                     [1m Learning iteration 784/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.478s, learning 0.056s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3232
+               Mean surrogate loss: 0.0001
+                 Mean entropy loss: 8.4165
+                       Mean reward: 9.15
+               Mean episode length: 249.25
+    Episode_Reward/reaching_object: 0.5340
+     Episode_Reward/lifting_object: 1.2300
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0025
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3336
+Metrics/object_pose/orientation_error: 3.0760
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 33600
+                    Iteration time: 7.53s
+                      Time elapsed: 00:04:19
+                               ETA: 06:51:54
+
+################################################################################
+                     [1m Learning iteration 785/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.520s, learning 0.046s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2262
+               Mean surrogate loss: -0.0103
+                 Mean entropy loss: 8.4183
+                       Mean reward: 9.45
+               Mean episode length: 249.87
+    Episode_Reward/reaching_object: 0.3600
+     Episode_Reward/lifting_object: 0.8600
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0006
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3467
+Metrics/object_pose/orientation_error: 2.5791
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 34560
+                    Iteration time: 7.57s
+                      Time elapsed: 00:04:27
+                               ETA: 06:52:45
+
+################################################################################
+                     [1m Learning iteration 786/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.558s, learning 0.051s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.3263
+               Mean surrogate loss: -0.0013
+                 Mean entropy loss: 8.4194
+                       Mean reward: 9.55
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4182
+     Episode_Reward/lifting_object: 2.3225
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0015
+          Episode_Reward/joint_vel: -0.0014
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1975
+Metrics/object_pose/orientation_error: 3.1138
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 35520
+                    Iteration time: 7.61s
+                      Time elapsed: 00:04:35
+                               ETA: 06:53:51
+
+################################################################################
+                     [1m Learning iteration 787/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.529s, learning 0.047s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.4627
+               Mean surrogate loss: -0.0063
+                 Mean entropy loss: 8.4197
+                       Mean reward: 9.80
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.5440
+     Episode_Reward/lifting_object: 2.7250
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0022
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2461
+Metrics/object_pose/orientation_error: 2.9560
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 36480
+                    Iteration time: 7.58s
+                      Time elapsed: 00:04:42
+                               ETA: 06:54:40
+
+################################################################################
+                     [1m Learning iteration 788/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.574s, learning 0.044s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2950
+               Mean surrogate loss: -0.0110
+                 Mean entropy loss: 8.4200
+                       Mean reward: 9.79
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.5720
+     Episode_Reward/lifting_object: 2.3750
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0053
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2786
+Metrics/object_pose/orientation_error: 3.1197
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 37440
+                    Iteration time: 7.62s
+                      Time elapsed: 00:04:50
+                               ETA: 06:55:42
+
+################################################################################
+                     [1m Learning iteration 789/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.512s, learning 0.047s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2742
+               Mean surrogate loss: -0.0061
+                 Mean entropy loss: 8.4211
+                       Mean reward: 9.78
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.5322
+     Episode_Reward/lifting_object: 3.1000
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0033
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3139
+Metrics/object_pose/orientation_error: 2.9272
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 38400
+                    Iteration time: 7.56s
+                      Time elapsed: 00:04:57
+                               ETA: 06:56:19
+
+################################################################################
+                     [1m Learning iteration 790/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.555s, learning 0.051s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.1678
+               Mean surrogate loss: -0.0098
+                 Mean entropy loss: 8.4212
+                       Mean reward: 10.19
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.3861
+     Episode_Reward/lifting_object: 1.5950
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0015
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2519
+Metrics/object_pose/orientation_error: 3.0256
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 39360
+                    Iteration time: 7.61s
+                      Time elapsed: 00:05:05
+                               ETA: 06:57:10
+
+################################################################################
+                     [1m Learning iteration 791/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.462s, learning 0.047s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2557
+               Mean surrogate loss: -0.0114
+                 Mean entropy loss: 8.4214
+                       Mean reward: 10.00
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.3932
+     Episode_Reward/lifting_object: 2.3700
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0023
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3096
+Metrics/object_pose/orientation_error: 3.0982
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 40320
+                    Iteration time: 7.51s
+                      Time elapsed: 00:05:12
+                               ETA: 06:57:24
+
+################################################################################
+                     [1m Learning iteration 792/15750 [0m                     
+
+                       Computation: 128 steps/s (collection: 7.394s, learning 0.050s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.1612
+               Mean surrogate loss: -0.0039
+                 Mean entropy loss: 8.4213
+                       Mean reward: 10.16
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4443
+     Episode_Reward/lifting_object: 1.9725
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0015
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3017
+Metrics/object_pose/orientation_error: 2.9115
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 41280
+                    Iteration time: 7.44s
+                      Time elapsed: 00:05:20
+                               ETA: 06:57:15
+
+################################################################################
+                     [1m Learning iteration 793/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.462s, learning 0.047s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.1818
+               Mean surrogate loss: -0.0105
+                 Mean entropy loss: 8.4210
+                       Mean reward: 10.09
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.5259
+     Episode_Reward/lifting_object: 1.9650
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0018
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2207
+Metrics/object_pose/orientation_error: 3.1121
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 42240
+                    Iteration time: 7.51s
+                      Time elapsed: 00:05:27
+                               ETA: 06:57:28
+
+################################################################################
+                     [1m Learning iteration 794/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.593s, learning 0.050s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2162
+               Mean surrogate loss: 0.0033
+                 Mean entropy loss: 8.4210
+                       Mean reward: 10.32
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.2860
+     Episode_Reward/lifting_object: 1.1625
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0008
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2403
+Metrics/object_pose/orientation_error: 3.1334
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 43200
+                    Iteration time: 7.64s
+                      Time elapsed: 00:05:35
+                               ETA: 06:58:24
+
+################################################################################
+                     [1m Learning iteration 795/15750 [0m                     
+
+                       Computation: 121 steps/s (collection: 7.879s, learning 0.052s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2228
+               Mean surrogate loss: -0.0058
+                 Mean entropy loss: 8.4212
+                       Mean reward: 10.32
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.1264
+     Episode_Reward/lifting_object: 0.4875
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0006
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3188
+Metrics/object_pose/orientation_error: 3.0697
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 44160
+                    Iteration time: 7.93s
+                      Time elapsed: 00:05:43
+                               ETA: 07:00:51
+
+################################################################################
+                     [1m Learning iteration 796/15750 [0m                     
+
+                       Computation: 128 steps/s (collection: 7.446s, learning 0.047s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2164
+               Mean surrogate loss: -0.0117
+                 Mean entropy loss: 8.4212
+                       Mean reward: 10.42
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4785
+     Episode_Reward/lifting_object: 1.9950
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0034
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2709
+Metrics/object_pose/orientation_error: 3.1112
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 45120
+                    Iteration time: 7.49s
+                      Time elapsed: 00:05:50
+                               ETA: 07:00:52
+
+################################################################################
+                     [1m Learning iteration 797/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.594s, learning 0.047s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2322
+               Mean surrogate loss: -0.0081
+                 Mean entropy loss: 8.4213
+                       Mean reward: 10.24
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4371
+     Episode_Reward/lifting_object: 1.3013
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0030
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2733
+Metrics/object_pose/orientation_error: 3.1090
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 46080
+                    Iteration time: 7.64s
+                      Time elapsed: 00:05:58
+                               ETA: 07:01:39
+
+################################################################################
+                     [1m Learning iteration 798/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.496s, learning 0.048s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2467
+               Mean surrogate loss: -0.0003
+                 Mean entropy loss: 8.4209
+                       Mean reward: 10.15
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.3318
+     Episode_Reward/lifting_object: 0.6150
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0009
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2088
+Metrics/object_pose/orientation_error: 3.0652
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 47040
+                    Iteration time: 7.54s
+                      Time elapsed: 00:06:06
+                               ETA: 07:01:54
+
+################################################################################
+                     [1m Learning iteration 799/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.517s, learning 0.050s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.1791
+               Mean surrogate loss: -0.0063
+                 Mean entropy loss: 8.4205
+                       Mean reward: 10.06
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.3294
+     Episode_Reward/lifting_object: 2.1450
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0008
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1995
+Metrics/object_pose/orientation_error: 3.1365
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 48000
+                    Iteration time: 7.57s
+                      Time elapsed: 00:06:13
+                               ETA: 07:02:15
+
+################################################################################
+                     [1m Learning iteration 800/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.586s, learning 0.048s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2514
+               Mean surrogate loss: -0.0078
+                 Mean entropy loss: 8.4206
+                       Mean reward: 10.22
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4562
+     Episode_Reward/lifting_object: 1.6350
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0023
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2272
+Metrics/object_pose/orientation_error: 2.9820
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 48960
+                    Iteration time: 7.63s
+                      Time elapsed: 00:06:21
+                               ETA: 07:02:54
+
+################################################################################
+                     [1m Learning iteration 801/15750 [0m                     
+
+                       Computation: 123 steps/s (collection: 7.697s, learning 0.051s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2610
+               Mean surrogate loss: -0.0099
+                 Mean entropy loss: 8.4208
+                       Mean reward: 10.04
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4555
+     Episode_Reward/lifting_object: 1.8200
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0011
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2469
+Metrics/object_pose/orientation_error: 3.0773
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 49920
+                    Iteration time: 7.75s
+                      Time elapsed: 00:06:29
+                               ETA: 07:04:05
+
+################################################################################
+                     [1m Learning iteration 802/15750 [0m                     
+
+                       Computation: 123 steps/s (collection: 7.698s, learning 0.047s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2079
+               Mean surrogate loss: -0.0066
+                 Mean entropy loss: 8.4209
+                       Mean reward: 9.98
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.3815
+     Episode_Reward/lifting_object: 0.9113
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0011
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2432
+Metrics/object_pose/orientation_error: 3.0996
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 50880
+                    Iteration time: 7.74s
+                      Time elapsed: 00:06:36
+                               ETA: 07:05:12
+
+################################################################################
+                     [1m Learning iteration 803/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.530s, learning 0.044s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2894
+               Mean surrogate loss: -0.0058
+                 Mean entropy loss: 8.4209
+                       Mean reward: 9.95
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.3768
+     Episode_Reward/lifting_object: 0.7825
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0012
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2542
+Metrics/object_pose/orientation_error: 2.9775
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 51840
+                    Iteration time: 7.57s
+                      Time elapsed: 00:06:44
+                               ETA: 07:05:28
+
+################################################################################
+                     [1m Learning iteration 804/15750 [0m                     
+
+                       Computation: 128 steps/s (collection: 7.440s, learning 0.046s)
+             Mean action noise std: 0.99
+          Mean value_function loss: 0.2090
+               Mean surrogate loss: -0.0006
+                 Mean entropy loss: 8.4209
+                       Mean reward: 10.16
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.5144
+     Episode_Reward/lifting_object: 1.7050
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0018
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3396
+Metrics/object_pose/orientation_error: 2.8420
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 52800
+                    Iteration time: 7.49s
+                      Time elapsed: 00:06:51
+                               ETA: 07:05:20
+
+################################################################################
+                     [1m Learning iteration 805/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.525s, learning 0.046s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3058
+               Mean surrogate loss: -0.0053
+                 Mean entropy loss: 8.4200
+                       Mean reward: 10.02
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.3851
+     Episode_Reward/lifting_object: 1.1325
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0032
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2178
+Metrics/object_pose/orientation_error: 3.0692
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 53760
+                    Iteration time: 7.57s
+                      Time elapsed: 00:06:59
+                               ETA: 07:05:35
+
+################################################################################
+                     [1m Learning iteration 806/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.582s, learning 0.046s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.4668
+               Mean surrogate loss: -0.0014
+                 Mean entropy loss: 8.4184
+                       Mean reward: 9.73
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4367
+     Episode_Reward/lifting_object: 0.7825
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0006
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2215
+Metrics/object_pose/orientation_error: 2.9733
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 54720
+                    Iteration time: 7.63s
+                      Time elapsed: 00:07:07
+                               ETA: 07:06:04
+
+################################################################################
+                     [1m Learning iteration 807/15750 [0m                     
+
+                       Computation: 123 steps/s (collection: 7.722s, learning 0.054s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3301
+               Mean surrogate loss: -0.0131
+                 Mean entropy loss: 8.4182
+                       Mean reward: 9.76
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.5038
+     Episode_Reward/lifting_object: 1.9200
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0013
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3423
+Metrics/object_pose/orientation_error: 2.8388
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 55680
+                    Iteration time: 7.78s
+                      Time elapsed: 00:07:14
+                               ETA: 07:07:09
+
+################################################################################
+                     [1m Learning iteration 808/15750 [0m                     
+
+                       Computation: 124 steps/s (collection: 7.680s, learning 0.052s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2940
+               Mean surrogate loss: -0.0062
+                 Mean entropy loss: 8.4184
+                       Mean reward: 9.85
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4053
+     Episode_Reward/lifting_object: 2.1163
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0005
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3676
+Metrics/object_pose/orientation_error: 2.6881
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 56640
+                    Iteration time: 7.73s
+                      Time elapsed: 00:07:22
+                               ETA: 07:08:01
+
+################################################################################
+                     [1m Learning iteration 809/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.512s, learning 0.043s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.4127
+               Mean surrogate loss: -0.0087
+                 Mean entropy loss: 8.4186
+                       Mean reward: 9.94
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4437
+     Episode_Reward/lifting_object: 2.4600
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0004
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2926
+Metrics/object_pose/orientation_error: 2.9560
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 57600
+                    Iteration time: 7.56s
+                      Time elapsed: 00:07:30
+                               ETA: 07:08:07
+
+################################################################################
+                     [1m Learning iteration 810/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.631s, learning 0.046s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2914
+               Mean surrogate loss: -0.0060
+                 Mean entropy loss: 8.4184
+                       Mean reward: 9.58
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4022
+     Episode_Reward/lifting_object: 1.1775
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0012
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.1991
+Metrics/object_pose/orientation_error: 3.1160
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 58560
+                    Iteration time: 7.68s
+                      Time elapsed: 00:07:37
+                               ETA: 07:08:43
+
+################################################################################
+                     [1m Learning iteration 811/15750 [0m                     
+
+                       Computation: 125 steps/s (collection: 7.594s, learning 0.056s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.3133
+               Mean surrogate loss: -0.0053
+                 Mean entropy loss: 8.4181
+                       Mean reward: 10.18
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4607
+     Episode_Reward/lifting_object: 2.6475
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0016
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2296
+Metrics/object_pose/orientation_error: 3.0717
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 59520
+                    Iteration time: 7.65s
+                      Time elapsed: 00:07:45
+                               ETA: 07:09:10
+
+################################################################################
+                     [1m Learning iteration 812/15750 [0m                     
+
+                       Computation: 127 steps/s (collection: 7.501s, learning 0.045s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2279
+               Mean surrogate loss: -0.0053
+                 Mean entropy loss: 8.4174
+                       Mean reward: 10.17
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.3773
+     Episode_Reward/lifting_object: 2.4225
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0006
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2164
+Metrics/object_pose/orientation_error: 3.1014
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 60480
+                    Iteration time: 7.55s
+                      Time elapsed: 00:07:52
+                               ETA: 07:09:12
+
+################################################################################
+                     [1m Learning iteration 813/15750 [0m                     
+
+                       Computation: 123 steps/s (collection: 7.707s, learning 0.044s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2933
+               Mean surrogate loss: 0.0004
+                 Mean entropy loss: 8.4172
+                       Mean reward: 10.12
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4428
+     Episode_Reward/lifting_object: 1.9525
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0014
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3301
+Metrics/object_pose/orientation_error: 2.6767
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 61440
+                    Iteration time: 7.75s
+                      Time elapsed: 00:08:00
+                               ETA: 07:10:01
+
+################################################################################
+                     [1m Learning iteration 814/15750 [0m                     
+
+                       Computation: 128 steps/s (collection: 7.452s, learning 0.045s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.4103
+               Mean surrogate loss: -0.0047
+                 Mean entropy loss: 8.4172
+                       Mean reward: 10.08
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.4783
+     Episode_Reward/lifting_object: 1.7700
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0014
+          Episode_Reward/joint_vel: -0.0021
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.2688
+Metrics/object_pose/orientation_error: 3.0440
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 62400
+                    Iteration time: 7.50s
+                      Time elapsed: 00:08:08
+                               ETA: 07:09:50
+
+################################################################################
+                     [1m Learning iteration 815/15750 [0m                     
+
+                       Computation: 126 steps/s (collection: 7.566s, learning 0.046s)
+             Mean action noise std: 0.98
+          Mean value_function loss: 0.2150
+               Mean surrogate loss: -0.0089
+                 Mean entropy loss: 8.4164
+                       Mean reward: 9.98
+               Mean episode length: 250.00
+    Episode_Reward/reaching_object: 0.5176
+     Episode_Reward/lifting_object: 2.0350
+Episode_Reward/object_goal_tracking: 0.0000
+Episode_Reward/object_goal_tracking_fine_grained: 0.0000
+        Episode_Reward/action_rate: -0.0013
+          Episode_Reward/joint_vel: -0.0025
+            Curriculum/action_rate: -0.0001
+              Curriculum/joint_vel: -0.0001
+Metrics/object_pose/position_error: 0.3085
+Metrics/object_pose/orientation_error: 2.9560
+      Episode_Termination/time_out: 1.0000
+Episode_Termination/object_dropping: 0.0000
+--------------------------------------------------------------------------------
+                   Total timesteps: 63360
+                    Iteration time: 7.61s
+                      Time elapsed: 00:08:15
+                               ETA: 07:10:05
