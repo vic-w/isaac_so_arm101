@@ -20,8 +20,8 @@ from isaaclab.sim.schemas.schemas_cfg import RigidBodyPropertiesCfg
 from isaaclab.sim.spawners.from_files.from_files_cfg import UsdFileCfg
 from isaaclab.utils import configclass
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
-from isaac_so_arm101.robots import SO_ARM100_CFG, SO_ARM100_ROSCON_CFG  # noqa: F401
-from isaac_so_arm101.tasks.lift.joint_pos_env_cfg import SoArm100LiftCubeEnvCfg
+from isaac_so_arm101.robots import SO_ARM100_CFG, SO_ARM101_CFG  # noqa: F401
+from isaac_so_arm101.tasks.lift.joint_pos_env_cfg import SoArm101LiftCubeEnvCfg
 
 from isaaclab.markers.config import FRAME_MARKER_CFG  # isort: skip
 
@@ -41,7 +41,7 @@ class CameraRewardsCfg:
 
     reaching_object = RewTerm(func=mdp.object_ee_distance, params={"std": 0.05}, weight=1.0)
 
-    lifting_object = RewTerm(func=mdp.object_is_lifted, params={"minimal_height": 0.01}, weight=15.0)
+    lifting_object = RewTerm(func=mdp.object_is_lifted, params={"minimal_height": 0.02}, weight=15.0)
 
     object_goal_tracking = RewTerm(
         func=mdp.object_goal_distance,
@@ -116,35 +116,53 @@ class CameraEventCfg:
 
 
 @configclass
-class SoArm100CameraLiftCubeEnvCfg(SoArm100LiftCubeEnvCfg):
+class SoArm101CameraLiftCubeEnvCfg(SoArm101LiftCubeEnvCfg):
     def __post_init__(self):
         """Currently identical to the base variant but defined separately for camera tasks."""
         super().__post_init__()
-        self.scene.num_envs = 70
+        self.scene.num_envs = 1#70
         
-        self.scene.robot = SO_ARM100_CFG.replace(
+        self.scene.robot = SO_ARM101_CFG.replace(
             prim_path="{ENV_REGEX_NS}/Robot",
-            init_state=SO_ARM100_CFG.init_state.replace(
+            init_state=SO_ARM101_CFG.init_state.replace(
                 joint_pos={
-                    "Shoulder_Rotation":    0.0,
-                    "Shoulder_Pitch":       0.5,
-                    "Elbow":                0.5,
-                    "Wrist_Pitch":          0.5,
-                    "Wrist_Roll": 0.0,
-                    "Gripper": 0.3,  # Middle position to make movement more apparent
+                    "shoulder_pan":    0.0,
+                    "shoulder_lift":   0.5,
+                    "elbow_flex":      0.5,
+                    "wrist_flex":      0.5,
+                    "wrist_roll":      0.0,
+                    "gripper":         0.3,  # Middle position to make movement more apparent
                 }
             ),
         )
 
+        marker_cfg = FRAME_MARKER_CFG.copy()
+        marker_cfg.markers["frame"].scale = (0.05, 0.05, 0.05)
+        marker_cfg.prim_path = "/Visuals/FrameTransformer"
+        self.scene.ee_frame = FrameTransformerCfg(
+            prim_path="{ENV_REGEX_NS}/Robot/base_link",
+            debug_vis=False,
+            visualizer_cfg=marker_cfg,
+            target_frames=[
+                FrameTransformerCfg.FrameCfg(
+                    prim_path="{ENV_REGEX_NS}/Robot/gripper_link",
+                    name="end_effector",
+                    offset=OffsetCfg(
+                        pos=[0.01, 0.0, -0.09],
+                    ),
+                ),
+            ],
+        )
+
         self.scene.camera = CameraCfg(
-            prim_path="{ENV_REGEX_NS}/Robot/Fixed_Gripper/Camera",
+            prim_path="{ENV_REGEX_NS}/Robot/gripper_link/Camera",
             update_period=0.0,
             height=480,
             width=640,
             data_types=("rgb",),
             offset=CameraCfg.OffsetCfg(
-                pos=[0.0, -0.1, 0.0],
-                rot=[0.96593, -0.25882, 0.0, 0.0],
+                pos=[0.0, 0.1, 0.0],
+                rot=[0.25882, 0.96593, 0.0, 0.0],
             ),
             spawn=sim_utils.PinholeCameraCfg(
                 focal_length=18.0, focus_distance=4.0, horizontal_aperture=32.0, clipping_range=(0.01, 1.0e5)
@@ -158,7 +176,7 @@ class SoArm100CameraLiftCubeEnvCfg(SoArm100LiftCubeEnvCfg):
 
 
 @configclass
-class SoArm100CameraLiftCubeEnvCfg_PLAY(SoArm100CameraLiftCubeEnvCfg):
+class SoArm101CameraLiftCubeEnvCfg_PLAY(SoArm101CameraLiftCubeEnvCfg):
     def __post_init__(self):
         # post init of parent
         super().__post_init__()
